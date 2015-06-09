@@ -52,13 +52,17 @@ mainMenu.prototype = {
         Pixel.anchor.setTo(0.5);
         Pixel.animations.add("PixelAnim");
         Pixel.animations.play("PixelAnim", 15, true);
+
         //Create Play Button
-        //Play = this.game.add.button(this.game.world.centerX, this.game.world.centerY - 50, "Button", this.CourseSelect, this, 0, 0, 1, 0);
-        //Play.anchor.setTo(0.5, 0.5);
-        //Play.scale.setTo(0.67);
-        //PlayText = this.game.add.bitmapText(Play.x, Play.y - 8, "8Bit", "Play", 84);
-        //PlayText.anchor.setTo(0.5, 0.5);
-        //PlayText.scale.setTo(0.67);
+        Play = this.game.add.button(this.game.world.centerX, this.game.world.centerY, "Button", this.PlayGame, this, 0, 0, 1, 0);
+        Play.anchor.setTo(0.5, 0.5);
+        PlayText = this.game.add.bitmapText(Play.x, Play.y + 10, "SquarePixel", "Play", 72);
+        PlayText.anchor.setTo(0.5, 0.5);
+
+        Options = this.game.add.button(this.game.world.centerX, this.game.world.centerY + 100, "Button", this.StartOptions, this, 0, 0, 1, 0);
+        Options.anchor.setTo(0.5, 0.5);
+        OptionsText = this.game.add.bitmapText(Options.x, Options.y + 6, "SquarePixel", "Options", 52);
+        OptionsText.anchor.setTo(0.5, 0.5);
 
         //Set Room Number to Main Menu
         RoomNumber = 1;
@@ -106,20 +110,6 @@ mainMenu.prototype = {
     */
     update: function(){
 
-        /*if (LeaderboardFound == true){
-            for (var i = 0, j = 0, space = 55; i < LoadedName.length; i++, j+=3, space += 55) {
-                LeaderNum = this.game.add.bitmapText(this.game.world.centerX + 20, this.game.world.centerY - 160 + space, "8Bit2", "\n" + (i+1) + ".   ", 38);
-                LeaderName = this.game.add.bitmapText(this.game.world.centerX + 100, this.game.world.centerY - 160 + space, "8Bit2", "\n" + LoadedName[i], 38);
-                LeaderScore = this.game.add.bitmapText(this.game.world.centerX + 390, this.game.world.centerY - 160 + space, "8Bit2","\n" + LoadedName[i], 38);
-                LeaderNum.tint = "0x000000";
-                LeaderName.tint = "0x000000";
-                LeaderScore.tint = "0x000000";
-                HighScoresCourse1[j] = LeaderNum;
-                HighScoresCourse1[j+1] = LeaderName;
-                HighScoresCourse1[j+2] = LeaderScore;
-            }
-            LeaderboardFound = false;
-        }*/
     },
 
     /**
@@ -137,67 +127,13 @@ mainMenu.prototype = {
     },
 
     /**
-     * Uploads High Score Data
-     * @param CourseLevel
-     * @constructor
-     */
-
-    /*UploadScores: function(){
-        var Name = prompt("Please enter your name");
-        if (Name != null) {
-
-            $.ajax({
-                url: 'HighScores/SendData.php',
-                type: 'post',
-                data: {"name": Name, "score": OverallScore, "hash": CryptoJS.MD5(Name + OverallScore + "15111994").toString(), "coursevalue" : LastCourse},
-                success: function (data) {
-                    console.log(data);
-                }
-            })
-        }
-    },*/
-
-    /**
-     * Handles Starting Game
-     * @param button
-     * @param pointer
-     * @param isOver - uses button and pointer parameters to check if the mouse is over the button
-     */
-    GoToCourse1: function(button, pointer, isOver){
-        if (isOver) {
-
-            //Leaderboard
-            /*LeaderboardText = this.game.add.bitmapText(HighScoreBoard.x, this.game.world.centerY - 140, "8Bit", "     Online\nLeaderboard", 45);
-            LeaderboardText.anchor.setTo(0.5);
-            $.ajax({
-                url: 'HighScores/TopScores.php',
-                type: 'post',
-                data: {"coursevalue" : 1},
-                success: function(data){
-                    //console.log(data);
-                    LeaderboardFoundCourse1 = true;
-                    results = JSON.parse(data);
-                    i = 0;
-
-                    results.forEach(function(result){
-                        LoadedNameCourse1[i] = result.name;
-                        LoadedScoreCourse1[i] = result.score;
-                        //console.log(LoadedName[i] + " - " + LoadedScore[i]);
-                        i++;
-                    });
-                }
-            });*/
-        }
-    },
-
-    /**
      * Deletes main menu objects and loads game
      */
     PlayGame: function(){
-        MusicControl.stop();
-        Play.destroy();
-        PlayText.destroy();
-        this.game.state.start("GameState")
+        //MusicControl.stop();
+        //Play.destroy();
+        //PlayText.destroy();
+        //this.game.state.start("GameState")
     }
 
 };

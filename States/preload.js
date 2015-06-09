@@ -24,7 +24,7 @@ preload.prototype = {
         this.game.load.spritesheet("PixelAnim", "Graphics/Main Menu/Pixel-Anim-Tile.png", 220, 238);
         this.game.load.bitmapFont("SquarePixel", "Fonts/SquarePixel.png", "Fonts/SquarePixel.fnt");
 
-        //this.game.load.spritesheet("Button", "Graphics/Buttons/Button.png", 400, 150);
+        this.game.load.spritesheet("Button", "Graphics/Main Menu/Button.png", 298, 80);
     },
     /**
      * Loads main menu
