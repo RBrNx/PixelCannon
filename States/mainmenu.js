@@ -58,11 +58,15 @@ mainMenu.prototype = {
         Play.anchor.setTo(0.5, 0.5);
         PlayText = this.game.add.bitmapText(Play.x, Play.y + 10, "SquarePixel", "Play", 72);
         PlayText.anchor.setTo(0.5, 0.5);
+        this.game.add.tween(Play).to({ y: 301 }, 2000, Phaser.Easing.Quadratic.InOut, true, 0, 1000, true);
+        this.game.add.tween(PlayText).to({ y: 311 }, 2000, Phaser.Easing.Quadratic.InOut, true, 0, 1000, true);
 
         Options = this.game.add.button(this.game.world.centerX, this.game.world.centerY + 100, "Button", this.StartOptions, this, 0, 0, 1, 0);
         Options.anchor.setTo(0.5, 0.5);
         OptionsText = this.game.add.bitmapText(Options.x, Options.y + 6, "SquarePixel", "Options", 52);
         OptionsText.anchor.setTo(0.5, 0.5);
+        this.game.add.tween(Options).to({ y: 401 }, 2000, Phaser.Easing.Quadratic.InOut, true, 0, 1000, true);
+        this.game.add.tween(OptionsText).to({ y: 407 }, 2000, Phaser.Easing.Quadratic.InOut, true, 0, 1000, true);
 
         //Set Room Number to Main Menu
         RoomNumber = 1;
