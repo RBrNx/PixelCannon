@@ -17,9 +17,11 @@ preload.prototype = {
 
         this.game.time.advancedTiming = true;
 
-        //this.game.load.audio("MainMenuMusic", "Music/MainMenu.ogg");
+        this.game.load.audio("MainMenuMusic", "Sound/MainMenu.ogg");
         this.game.load.image("Background-Main", "Graphics/Main Menu/Background-Main.png");
+        this.game.load.image("Background-Options", "Graphics/Main Menu/Background-Options.png");
         this.game.load.image("Logo", "Graphics/Main Menu/Logo.png");
+        this.game.load.spritesheet("SunAnim", "Graphics/Main Menu/Sun-Anim-Tile.png", 145, 130);
         this.game.load.spritesheet("LogoAnim", "Graphics/Main Menu/Logo-Anim-Tile.png", 864, 134);
         this.game.load.spritesheet("PixelAnim", "Graphics/Main Menu/Pixel-Anim-Tile.png", 220, 238);
         this.game.load.bitmapFont("SquarePixel", "Fonts/SquarePixel.png", "Fonts/SquarePixel.fnt");
