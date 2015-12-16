@@ -1,0 +1,3 @@
+This was a project I decided to undertake in the summer of 2015 (June to be exact). Since I enjoyed my time with Phaser I deicded that I would use it again, this time however with a game concept that would mean I could focus a lot more on gameplay instead of always creating new levels.
+
+Here is a quick summary: You are a Pixel, Homesick and thousands of miles from home. All you have is your trusty cannon and a strange shop keeper who is weirdly interested in helping you for no apparent reason. You must launch yourself time and time again, using the shopkeepers help to get upgrades for yourself and for your cannon to make your way back home.
